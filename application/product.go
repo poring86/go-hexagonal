@@ -28,12 +28,13 @@ type Product struct {
 
 // }
 
+// Método maiusculo é public e minusculo é private
 func (p *Product) Enable() error {
 	if p.Price > 0 {
 		p.Status = ENABLED
 		return nil
 	}
-	return errors.New("The price must be greater thant zero to enable the product")
+	return errors.New("The price must be greater than zero to enable the product")
 }
 
 func (p *Product) GetID() string {

@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestProduct_Enable(t *testing.T) {
+func TestApplicationProduct_Enable(t *testing.T) {
 	product := application.Product{}
 
 	product.Name = "Aftershave"
@@ -19,5 +19,5 @@ func TestProduct_Enable(t *testing.T) {
 
 	product.Price = 0
 	err = product.Enable()
-	require.Equal(t, "the price must be greater than zero to enable the product", err.Error())
+	require.Equal(t, "The price must be greater than zero to enable the product", err.Error())
 }
