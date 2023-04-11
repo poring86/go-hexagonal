@@ -28,7 +28,7 @@ func (p *ProductDb) Get(id string) (application.ProductInterface, error) {
 	return &product, nil
 }
 
-func (p *ProductDb) Save(product application.ProductInterface) (application.ProductInterface, err) {
+func (p *ProductDb) Save(product application.ProductInterface) (application.ProductInterface, error) {
 	var rows int
 	p.db.QueryRow("select id from products where id=?", product.GetID()).Scan(&rows)
 	if rows == 0 {
