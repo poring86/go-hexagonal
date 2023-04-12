@@ -8,7 +8,7 @@ import (
 	"database/sql"
 	"os"
 
-	dbInfra "github.com/poring86/go-hexagonal/adapters"
+	dbInfra "github.com/poring86/go-hexagonal/adapters/db"
 	"github.com/poring86/go-hexagonal/application"
 	"github.com/spf13/cobra"
 )
